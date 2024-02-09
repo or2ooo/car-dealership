@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import { useLoginMutation } from 'api/queries/userApi';
 import { useAppDispatch } from 'app/hooks';
 import { setUser } from 'state/slices/userSlice';
 
 export const useLoginViewModel = () => {
     const dispatch = useAppDispatch();
-    const navigate = useNavigate(); // Use the useNavigate hook
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [login, { isLoading }] = useLoginMutation();
+    const [login, { isLoading, isError }] = useLoginMutation();
 
     const handleLogin = async () => {
         try {
@@ -17,9 +17,10 @@ export const useLoginViewModel = () => {
             dispatch(setUser(result.user));
             navigate('/');
         } catch (error) {
-            alert('Login failed');
+            console.error('Login failed', error);
+            throw error;
         }
     };
 
-    return { setUsername, setPassword, handleLogin, isLoading };
+    return { setUsername, setPassword, handleLogin, isLoading, isError };
 };
