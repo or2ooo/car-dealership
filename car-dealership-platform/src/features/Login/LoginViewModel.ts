@@ -15,7 +15,7 @@ export const useLoginViewModel = () => {
         try {
             const result = await login({ username, password }).unwrap();
             dispatch(setUser(result.user));
-            navigate('/cars');
+            navigate('/');
         } catch (error) {
             alert('Login failed');
         }
