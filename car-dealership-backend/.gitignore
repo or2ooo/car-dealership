@@ -1,0 +1,31 @@
+# Dependency directories
+/node_modules
+/.yarn
+
+# Yarn cache
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Production logs
+*.log
+
+# Local environment variables
+.env
+
+# Operating system-generated files
+.DS_Store
+Thumbs.db
+
+# Debugger output
+npm-debug.log*
+
+# Coverage directory
+/coverage
+
+# VS Code Settings 
+.vscode/ 
