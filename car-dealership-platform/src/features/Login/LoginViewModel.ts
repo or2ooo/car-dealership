@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLoginMutation } from 'api/queries/userApi';
+import { useLoginMutation } from 'services/userApi';
 import { useAppDispatch } from 'app/hooks';
 import { setUser } from 'state/slices/userSlice';
 

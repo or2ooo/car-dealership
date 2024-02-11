@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useFetchCarsQuery, useAddCarMutation } from 'api/queries/carApi';
+import { useFetchCarsQuery, useAddCarMutation } from 'services/carApi';
 
 
 export const useCarDealershipViewModel = () => {

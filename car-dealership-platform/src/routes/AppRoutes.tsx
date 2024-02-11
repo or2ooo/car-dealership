@@ -26,7 +26,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/login" element={<LoginView />} />
         <Route path="/" element={<RequireAuth><CarDealershipView /></RequireAuth>} />
-        {/* Add more authenticated routes as needed inside RequireAuth */}
+        {/* More authenticated routes as needed inside RequireAuth */}
       </Routes>
     </Router>
   );

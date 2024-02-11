@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import type { User } from 'models/user';
+import type { User } from 'features/Login/models/user';
 
 export const userApi = createApi({
     reducerPath: 'userApi',

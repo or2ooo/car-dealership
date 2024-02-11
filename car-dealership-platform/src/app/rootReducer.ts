@@ -1,7 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import userReducer from 'state/slices/userSlice';
-import { userApi } from 'api/queries/userApi';
-import { carApi } from 'api/queries/carApi';
+import { userApi } from 'services/userApi';
+import { carApi } from 'services/carApi';
 
 const rootReducer = combineReducers({
     // Your other reducers here
